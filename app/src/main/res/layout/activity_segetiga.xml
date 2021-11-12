@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".Segetiga">
 
+    <Button
+        android:id="@+id/hitungluas"
+        android:layout_width="237dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:minWidth="235dp"
+        android:text="Hitung Luas"
+        app:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/hluas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tinggi" />
+
+    <EditText
+        android:id="@+id/tinggi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="20dp"
+        android:hint="Masukan nilai tinggi"
+        app:layout_constraintBottom_toTopOf="@+id/hitungluas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alas" />
+
+    <TextView
+        android:id="@+id/hluas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="421dp"
+        android:text="Nilai Luasnya Adalah : "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hitungluas" />
+
+    <EditText
+        android:id="@+id/alas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginBottom="29dp"
+        android:hint="Masukan nilai alas"
+        app:layout_constraintBottom_toTopOf="@+id/tinggi"
+        app:layout_constraintEnd_toEndOf="@+id/tinggi"
+        app:layout_constraintStart_toStartOf="@+id/tinggi"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
