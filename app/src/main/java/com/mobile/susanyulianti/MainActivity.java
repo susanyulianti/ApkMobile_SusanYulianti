@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button viewsegtiga;
     private  Button viewpilih;
+    private Button viewweb;
 
 
     @Override
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         //deklarasi ID
         viewsegtiga = (Button) findViewById(R.id.segitiga);
         viewpilih = (Button)findViewById(R.id.pilih);
+        viewweb = (Button) findViewById(R.id.webview);
 
 
         //aksi listener atau intent
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //memanggil class segitiga
                 startActivity(new Intent(getApplicationContext(),Segetiga.class));
+            }
+        });
+        viewweb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ViewWeb.class));
             }
         });
         //aksi radio
