@@ -12,8 +12,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button viewsegtiga;
-    private  Button viewpilih;
+    private  Button viewrb;
     private Button viewweb;
+    private  Button viewscroll;
 
 
     @Override
@@ -23,8 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
         //deklarasi ID
         viewsegtiga = (Button) findViewById(R.id.segitiga);
-        viewpilih = (Button)findViewById(R.id.pilih);
         viewweb = (Button) findViewById(R.id.webview);
+        viewrb  = (Button) findViewById(R.id.rb);
+        viewscroll = (Button)findViewById(R.id.scroll);
 
 
         //aksi listener atau intent
@@ -41,23 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),ViewWeb.class));
             }
         });
-        //aksi radio
-        final RadioGroup rgbjenis = (RadioGroup) findViewById(R.id.rgjenis);
-        viewpilih.setOnClickListener(new View.OnClickListener() {
+        viewrb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int id = rgbjenis.getCheckedRadioButtonId();
-                switch (id){
-                    case R.id.rbj:
-                        Toast.makeText(getApplication(), "saya Suka Java", Toast.LENGTH_SHORT).show();
-                        break;
-                        case R.id.rbk:
-                        Toast.makeText(getApplication(), "saya Suka Kotlin", Toast.LENGTH_SHORT).show();
-                            break;
-                        case R.id.rbf:
-                        Toast.makeText(getApplication(), "saya Suka Flutter", Toast.LENGTH_SHORT).show();
-                            break;
-                }
+                startActivity(new Intent(getApplicationContext(),RadioButton.class));
+            }
+        });
+        viewscroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Scroll.class));
             }
         });
     }

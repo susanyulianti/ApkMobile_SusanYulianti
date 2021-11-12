@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SusanYulianti">
         <activity
+            android:name=".Scroll"
+            android:exported="true" />
+        <activity
+            android:name=".RadioButton"
+            android:exported="true" />
+        <activity
             android:name=".ViewWeb"
             android:exported="true" />
         <activity
